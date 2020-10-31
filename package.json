@@ -1,0 +1,23 @@
+{
+  "name": "rimarok",
+  "version": "1.0.0",
+  "description": "My profesionnal website, built on kami.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js --experimental-modules",
+    "test": "npm start -- test",
+    "readme": "npm start -- -k readme -force -log build",
+    "website": "npm start -- -k website -force -log build default"
+  },
+  "keywords": [
+    "romaric",
+    "ruga",
+    "imrok",
+    "full-stack",
+    "dev",
+    "freelance"
+  ],
+  "author": "romaric.ruga@gmail.com",
+  "license": "ISC"
+}
