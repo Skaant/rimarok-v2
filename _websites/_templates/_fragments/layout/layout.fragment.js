@@ -16,11 +16,23 @@ export default (
     <link href="/assets/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <nav class="navbar position-absolute">
+    <nav class="navbar navbar-expand-md position-absolute w-100">
       <a href="/"
-          class="font-weight-bold navbar-brand m-3 text-light">
+          class="font-weight-bold navbar-brand mt-3 ml-3 pb-0 text-light">
         RIMAROK</a>
+      <span></span>
+    
+      <div style="flex-grow: 1">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end text-right">
+          <li class="nav-item active">
+            <a href="/mentions-legales"
+                class="nav-link text-white">
+              Mentions légales</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     ${ content }
+    <script src='/assets/nalytimk.js'></script>
   </body>
 </html>`

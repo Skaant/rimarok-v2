@@ -100,11 +100,6 @@ p a:not(.btn) {
   color: #FFFE;
 }
 
-.btn.rounded-pill {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-
 .badger {
   top: -125px;
   right: 0;
