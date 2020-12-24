@@ -1,5 +1,5 @@
-import PAGE from '../../../../kami.js/_shrine/website/_shrine/page/page.kami.js'
-import FOLDER from '../../../../kami.js/_shrine/folder/folder.kami.js'
+import WEBSITE_PAGE from '../../../../motifs-js/_motifs/website-page/website-page.motif.js'
+import FOLDER from '../../../../motifs-js/_motifs/folder/folder.motif.js'
 import homeTemplate from "../../../_templates/home/home.template.js"
 import legalsTemplate from '../../../_templates/legals/legals.template.js'
 
@@ -9,7 +9,7 @@ export default (
   options
 ) => ([
   /** / */
-  PAGE.create(
+  WEBSITE_PAGE.create(
     homeTemplate,
     data,
     scope,
@@ -19,7 +19,7 @@ export default (
     scope,
     'mentions-legales',
     folderScope => [
-      PAGE.create(
+      WEBSITE_PAGE.create(
         legalsTemplate,
         data,
         folderScope,

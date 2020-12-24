@@ -1,14 +1,13 @@
-import KAMI from './kami.js/index.js'
+import motifsJs from './motifs-js/index.js'
 
-KAMI.ave(
+motifsJs(
   import.meta.url,
   {
     log: true
   }
 )
-
-KAMI.cli(
-  process.argv.slice(3),
-  {
-    log: true
-  })
+  .cli(
+    process.argv.slice(3),
+    {
+      log: true
+    })

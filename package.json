@@ -1,7 +1,7 @@
 {
   "name": "rimarok",
   "version": "1.0.0",
-  "description": "My profesionnal website, built on kami.js.",
+  "description": "My profesionnal website, built on motifs-js.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -15,8 +15,10 @@
     "ruga",
     "imrok",
     "full-stack",
-    "dev",
-    "freelance"
+    "javascript",
+    "developer",
+    "freelance",
+    "motifs-js"
   ],
   "author": "romaric.ruga@gmail.com",
   "license": "ISC"
