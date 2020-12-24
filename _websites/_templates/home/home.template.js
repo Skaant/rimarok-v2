@@ -50,7 +50,7 @@ export default data => layoutFragment(
           <h2 class="mb-4">
             Contact et autres plateformes</h2>
           <p>Pour me contacter, vous pouvez utiliser mon
-            <a href="romaric.ruga@gmail.com"
+            <a href="mailto:romaric.ruga@gmail.com"
                 class="text-white font-weight-bold">
               adresse mail</a>
             ou l'une des plateformes suivantes :

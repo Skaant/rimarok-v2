@@ -11,7 +11,8 @@ export default (
     <meta name="description" content="${ description }">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>${ title }</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/rimarok-logo.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="image_src" href="/assets/thumbnail.jpg">
     <link href="/assets/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/style.css" rel="stylesheet" type="text/css">
   </head>
