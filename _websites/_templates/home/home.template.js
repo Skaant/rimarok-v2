@@ -165,7 +165,7 @@ export default data => layoutFragment(
       </div>
       <div class='text-center row pb-2'>
         <div class='container'>
-          <img src='/assets/rimarok-logo.svg'/>
+          <img src='/assets/logo.svg'/>
           <p class='small text-center'>
             2020 - Design, illustrations, code et déploiement par <b>Romaric Ruga</b>.</p>
         </div>

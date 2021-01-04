@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node index.js --experimental-modules",
-    "test": "npm start -- test",
+    "test": "npm start -- -log test",
     "readme": "npm start -- -k readme -force -log build",
-    "website": "npm start -- -k website -force -log build default"
+    "website": "npm start -- -k website -force -log build default",
+    "serve": "npm start -- -k website -force -log serve default"
   },
   "keywords": [
     "romaric",
@@ -21,5 +22,9 @@
     "motifs-js"
   ],
   "author": "romaric.ruga@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "motifs-js": "^0.3.1"
+  }
 }

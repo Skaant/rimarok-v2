@@ -1,4 +1,4 @@
-import motifsJs from './motifs-js/index.js'
+import motifsJs from 'motifs-js/index.js'
 
 motifsJs(
   import.meta.url,
