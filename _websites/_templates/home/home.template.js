@@ -57,13 +57,13 @@ export default data => layoutFragment(
           </p>
           <p class="h2">
             <a href="https://www.malt.fr/profile/romaricruga"
-                class="btn btn-light rounded-pill px-4 py-2 mb-2 font-weight-bold">
+                class="btn btn-light text-dark rounded-pill px-4 py-2 mb-2 font-weight-bold">
               Malt</a>
             <a href="https://www.linkedin.com/in/romaric-ruga-507244a1/"
-                class="btn btn-light rounded-pill px-4 py-2 mb-2 font-weight-bold">
+                class="btn btn-light text-dark rounded-pill px-4 py-2 mb-2 font-weight-bold">
               LinkedIn</a>
             <a href="https://github.com/Skaant"
-                class="btn btn-light rounded-pill px-4 py-2 mb-2 font-weight-bold">
+                class="btn btn-light text-dark rounded-pill px-4 py-2 mb-2 font-weight-bold">
               GitHub</a>
           </p>
         </div>

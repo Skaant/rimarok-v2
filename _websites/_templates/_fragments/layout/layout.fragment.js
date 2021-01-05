@@ -29,6 +29,8 @@ export default (
             <a href="/articles"
                 class="nav-link text-white">
               Articles</a>
+          </li>
+          <li class="nav-item active">
             <a href="/mentions-legales"
                 class="nav-link text-white">
               Mentions légales</a>

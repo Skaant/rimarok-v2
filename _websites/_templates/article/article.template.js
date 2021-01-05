@@ -5,7 +5,7 @@ export default data => layoutFragment(
   data,
   {
     title: data.article.title
-      + ' | ARTICLE ' + data.article.index
+      + ' | Article ' + data.article.index
       + ' | ' + data.title,
     description: data.article.description
       || data.article.content
@@ -44,10 +44,17 @@ export default data => layoutFragment(
       <div class="row bg-blue">
         <p class="col-12">
           Retour
-          <a href="/articles">ARTICLES</a>
+          <a href="/articles">Articles</a>
           /
           <a href="/">Accueil</a>
         </p>
+      </div>
+      <div class='text-center row pb-2'>
+        <div class='container'>
+          <img src='/assets/logo.svg'/>
+          <p class='small text-center'>
+            2020 - Design, illustrations, code et déploiement par <b>Romaric Ruga</b>.</p>
+        </div>
       </div>
     </div>`
   })
