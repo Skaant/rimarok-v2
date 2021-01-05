@@ -12,36 +12,42 @@ export default data => layoutFragment(
         .split('\n\n')[0]
         .replace(/"/g, '\"')
         .slice(0, 150),
-    content: `<div class="container">
-      <h1 class="main">
-        ${ data.article.title }</h1>
-      <p class="mt-2 mb-5">
-        publié par
-        <a href="mailto:romaric.ruga@gmail.com"
-            class="text-golden font-weight-bold">
-          imrok*</a>
-        le
-        <span class="badge badge-pill badge-light">
-          ${ data.article.date }</span>
+    content: `<div class="container-fluid">
+      <div class="row position-relative bg-blue align-content-center justify-content-center">
+        <h1 class="main col-12">
+          ${ data.article.title }</h1>
+        <p class="mt-2 mb-5 col-12">
+          publié par
+          <a href="mailto:romaric.ruga@gmail.com"
+              class="text-golden font-weight-bold">
+            rimarok</a>
+          le
+          <span class="badge badge-pill badge-light">
+            ${ data.article.date }</span>
+          ${
+            data.article.tags.map(tag => `
+            <span class="badge badge-pill badge-info">
+              ${ tag }</span>`
+            )
+              .join('')
+          }
+        </p>
+      </div>
+      <div class="container py-5">
         ${
-          data.article.tags.map(tag => `
-          <span class="badge badge-pill badge-info">
-            ${ tag }</span>`
-          )
-            .join('')
+          (new showdown.Converter({
+            simpleLineBreaks: true
+          }))
+            .makeHtml(data.article.content)
         }
-      </h2>
-      ${
-        (new showdown.Converter({
-          simpleLineBreaks: true
-        }))
-          .makeHtml(data.article.content)
-      }
-      <h3>
-        Retour
-        <a href="/articles">ARTICLES</a>
-        /
-        <a href="/">Accueil)</a>
-      </h3>
+      </div>
+      <div class="row bg-blue">
+        <p class="col-12">
+          Retour
+          <a href="/articles">ARTICLES</a>
+          /
+          <a href="/">Accueil</a>
+        </p>
+      </div>
     </div>`
   })

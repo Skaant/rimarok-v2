@@ -1,19 +1,10 @@
-export default {
-  id: '1',
-  title: 'motifs-js : Publier un module npm',
-  date: '05/01/2021',
-  tags: [ 'dev', 'npm', 'motifs-js' ],
-  description: 'Malgré un investissement initial de temps plus important, '
-    + 'créer son propre module npm et le publier est la meilleure façon de '
-    + 'partager son code entre plusieurs projets. '
-    + 'Voyons ensemble la marche à suivre pour publier notre premier module npm !',
-  content: `> L'abstraction est l'une des compétence-clé du programmeur.
+> L'abstraction est l'une des compétence-clé du programmeur.
 
 Il existe plusieurs façons de partager du code à travers ses projets : du simple copié-collé au partage de modules sur des registres publics dédiés à un langage (npm pour le JavaScript, Composer pour PHP, Maven etc.).
 
 Dans cet article, j'aborde le sujet **de la publication de module npm sur le registre public**.
 
-Je l'illustre avec le processus de mise au point, de partage et d'intégration de **mon framework [\`motifs-js\`](https://github.com/Skaant/motifs-js)**, dont je me sers pour le "test" et le "build" de mes différents sites internet ([rimarok.com](https://rimarok.com), [imrok.fr](https://imrok.fr), [highbs-bok.art](https://highbs-bok.art) ou encore le [site de la documentation du module](https://motifs-js-website.vercel.app)).
+Je l'illustre avec le processus de mise au point, de partage et d'intégration de **mon framework [`motifs-js`](https://github.com/Skaant/motifs-js)**, dont je me sers pour le "test" et le "build" de mes différents sites internet ([rimarok.com](https://rimarok.com), [imrok.fr](https://imrok.fr), [highbs-bok.art](https://highbs-bok.art) ou encore le [site de la documentation du module](https://motifs-js-website.vercel.app)).
 
 Mais revenons une bonne fois pour toute sur les motivations nécessaires à la création d'un module npm. 
 
@@ -25,7 +16,7 @@ Nous ratons alors l'opportunité de dériver des motifs (*patterns*) à la fois 
 
 Cette seconde préoccupation ne présente réellement un intérêt que dans la perspective d'industrialiser des parties d'un produit, en repliquant des concepts (et éventuellement leur implémentation) d'un contexte à l'autre.
 
-Voyant le temps nécessaire pour développer et tester le contenu commun qu'est \`motifs-js\`, je ne pourrais que trop mettre en garde sur le fait que **le travail requis pour la mise-au-point d'un module npm ne se justifie que s'il en économise d'avantage à moyen et long termes**.
+Voyant le temps nécessaire pour développer et tester le contenu commun qu'est `motifs-js`, je ne pourrais que trop mettre en garde sur le fait que **le travail requis pour la mise-au-point d'un module npm ne se justifie que s'il en économise d'avantage à moyen et long termes**.
 
 Alors, quand est-ce le bon moment ?
 
@@ -42,9 +33,9 @@ Mais bien évidemment lorsque j'améliore, corrige ou étend, une fonctionnalit�
 
 Toutefois, voilà une bonne illustration de l'**émergence du besoin d'abstraction** : quand deux consommateurs (au moins) commencent à partager le même bloc logique.
 
-Dans la section suivante, nous nous servirons des fonctionnalités \`motifs-js\` pour continuer à imager le partage de concepts entre projets.
+Dans la section suivante, nous nous servirons des fonctionnalités `motifs-js` pour continuer à imager le partage de concepts entre projets.
 
-### Grands blocs logiques de \`motifs-js\`
+### Grands blocs logiques de `motifs-js`
 
 Reprenons l'historique commencé plus haut pour re-tracer l'acquisition de nouvelles fonctionnalités par le framework.
 
@@ -55,7 +46,7 @@ Reprenons l'historique commencé plus haut pour re-tracer l'acquisition de nouve
 * Des outils de manipulation du file-system,
 * Un moteur de tests unitaires pour les spécifications des blocs précédents.
 
-*Les raisons pour lesquelles j'ai fait le choix de développer la racine du framework sans en intégrer d'autres (ex: \`jest\` pour les tests, \`gatsby\` pour la génération de site) seront détaillées dans un autre article.*
+*Les raisons pour lesquelles j'ai fait le choix de développer la racine du framework sans en intégrer d'autres (ex: `jest` pour les tests, `gatsby` pour la génération de site) seront détaillées dans un autre article.*
 
 En partant d'une approche UX / DX (developer experience), l'objectif est de **réduire au maximum les points de résistance lors de l'usage de l'outil**, notamment en évitant de ré-écrire (et de maintenir) le même contenu.
 
@@ -79,17 +70,17 @@ La somme des problématiques soulevées et partagées par ces fonctionnalités m
 
 La façon minimale pour publier un module est :
 
-\`\`\`bash
+```bash
 npm init
 npm login
 npm publish
-\`\`\`
+```
 
-De là, il nous serait possible, après un \`npm install <nom-du-module>\` dans le projet concerné, d'importer le module depuis n'importe quel fichier avec la ligne (exemple) :
+De là, il nous serait possible, après un `npm install <nom-du-module>` dans le projet concerné, d'importer le module depuis n'importe quel fichier avec la ligne (exemple) :
 
-\`\`\`javascript
+```javascript
 import motifsJs from 'motifs-js'
-\`\`\`
+```
 
 Cependant, comme je vais m'en apercevoir, entre [le répertoire GitHub](https://github.com/Skaant/motifs-js) que je clonais à la racine de chaque projet et la publication d'un module npm, il y a quelques subtilités.
 
@@ -97,15 +88,15 @@ Intéressons-nous donc aux quelques contraintes apportées par le format du modu
 
 ### Le point d'entrée
 
-Un module npm est (re)présenté par le fichier \`package.json\`, obtenu lors de l'execution du script \`npm init\`.
+Un module npm est (re)présenté par le fichier `package.json`, obtenu lors de l'execution du script `npm init`.
 
 Pour le moment c'est un point qui souffre encore de ne pas être inclus dans un motif du framework, mais envisagé (avec l'ajout de PROJECT).
 
-Cependant, même s'il faut la copier manuellement, tous les projets partagent la même implémentation de leur point d'entrée avec un \`index.js\` qui importe \`motifs-js\` pour l'initialiser et ouvrir le "réceptionneur" du CLI.
+Cependant, même s'il faut la copier manuellement, tous les projets partagent la même implémentation de leur point d'entrée avec un `index.js` qui importe `motifs-js` pour l'initialiser et ouvrir le "réceptionneur" du CLI.
 
 Par exemple, dans [le projet-source du site rimarok](https://github.com/Skaant/rimarok), on a [pour index](https://github.com/Skaant/rimarok/blob/master/index.js) :
 
-\`\`\`javascript
+```javascript
 import motifsJs from 'motifs-js'
 
 motifsJs(
@@ -116,13 +107,13 @@ motifsJs(
     process.argv.slice(3),
     { log: true }
   )
-\`\`\`
+```
 
-Le fichier \`index.js\` est le **point d'entrée de chaque projet**, et \`motifs-js\` n'y échappe pas (*standalone*).
+Le fichier `index.js` est le **point d'entrée de chaque projet**, et `motifs-js` n'y échappe pas (*standalone*).
 
-Le sens donné à cette notion dans le framework est renforcé par la necessité de \`motifs-js\` d'être initialisé avant d'être utilisable.
+Le sens donné à cette notion dans le framework est renforcé par la necessité de `motifs-js` d'être initialisé avant d'être utilisable.
 
-De là, on récupère MOTIF (ou \`motifMotif\`), qui nous permet d'accéder aux fonctionnalités principales du framework.
+De là, on récupère MOTIF (ou `motifMotif`), qui nous permet d'accéder aux fonctionnalités principales du framework.
 
 Comme la racine d'un backend API REST, **le point d'entrée d'un module, doit contenir tous les outils nécessaires à l'usage des fonctionnalités que ce module propose**, documentation comprise.
 
@@ -144,13 +135,13 @@ Avant de publier, il semble de bon sens de tester le module localement.
 
 Or, on sera surpris que l'installation d'un module local, bien que possible, ne s'effectue pas dans les mêmes conditions qu'on module externe.
 
-En effet, lorsqu'on lance \`npm i <chemin-relatif-vers-le-module>\` **npm ne copie pas le contenu du module mais référence simplement son chemin** dans \`package.json\`.
+En effet, lorsqu'on lance `npm i <chemin-relatif-vers-le-module>` **npm ne copie pas le contenu du module mais référence simplement son chemin** dans `package.json`.
 
 Dans mon projet, j'ai besoin de récupérer le contenu du répertoire du module pour, entre autres, lister les fichiers qu'il contient : c'est là la seule problématique majeure que j'ai rencontre durant cette migration.
 
-Pour l'heure, dans les tests du module, je vérifiais l'accessibilité du dossier \`node_modules/motifs-js\` lorsque le projet ne tourne pas en standalone (donc mode consommateur) ... sauf qu'avec l'installation locale ce dossier n'existe pas.
+Pour l'heure, dans les tests du module, je vérifiais l'accessibilité du dossier `node_modules/motifs-js` lorsque le projet ne tourne pas en standalone (donc mode consommateur) ... sauf qu'avec l'installation locale ce dossier n'existe pas.
 
-L'astuce un peu sale que j'ai trouvé pour le moment est de cloner le répertoire de \`motifs-js\` dans les \`node_modules\` des projets dont sur lesquels je teste l'intégration du framework.
+L'astuce un peu sale que j'ai trouvé pour le moment est de cloner le répertoire de `motifs-js` dans les `node_modules` des projets dont sur lesquels je teste l'intégration du framework.
 
 Bien entendu, et comme toujours, **à différents niveaux de tests, différents besoins**.
 
@@ -160,12 +151,12 @@ Il est tout à faire possible de copier-coller le dossier, mais l'avantage du gi
 
 Développer un projet comme un module npm nécessite de bien garder en tête la forme standard d'un module.
 
-En plus de rendre simplement accessible les fichiers du module, comme avec ces lignes de \`mapping.util.js\` :
+En plus de rendre simplement accessible les fichiers du module, comme avec ces lignes de `mapping.util.js` :
 
-\`\`\`javascript
+```javascript
 import WEBSITE_PAGE from 'motifs-js/_motifs/website-page/website-page.motif.js'
 import FOLDER from 'motifs-js/_motifs/folder/folder.motif.js'
-\`\`\`
+```
 
 ... le module dispose d'un point d'entrée autour duquel maximiser les accès aux fonctionnalités.
 
@@ -178,5 +169,3 @@ On vérifiera également que ces consommateurs intègrent correctement le framew
 *La roadmap est infinie, les fonctionnalités critiques à développer puis à fiabiliser nombreuses !**
 
 À bientôt pour des nouvelles de mes projets de développement, et d'autres réflexions sur le code.
-`
-}

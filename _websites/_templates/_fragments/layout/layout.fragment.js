@@ -26,6 +26,9 @@ export default (
       <div style="flex-grow: 1">
         <ul class="navbar-nav mr-auto w-100 justify-content-end text-right">
           <li class="nav-item active">
+            <a href="/articles"
+                class="nav-link text-white">
+              Articles</a>
             <a href="/mentions-legales"
                 class="nav-link text-white">
               Mentions légales</a>

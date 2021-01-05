@@ -1,13 +1,8 @@
-import motifsJs from 'motifs-js/index.js'
+import motifsJs from 'motifs-js'
 
 motifsJs(
   import.meta.url,
-  {
-    log: true
-  }
-)
+  { log: true })
   .cli(
     process.argv.slice(3),
-    {
-      log: true
-    })
+    { log: true })

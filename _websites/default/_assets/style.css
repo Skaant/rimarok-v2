@@ -47,6 +47,14 @@ h1, h2, h3, h4,
   padding: 7rem 3rem 5rem;
 }
 
+.row:nth-child(1) {
+  padding-top: 10rem;
+}
+
+.row:nth-child(2) {
+  min-height: 70vh;
+}
+
 @media (max-width: 576px) {
 
   .row .media {
@@ -95,6 +103,7 @@ p a:not(.btn) {
 }
 
 .bg-blue,
+.bg-blue a,
 .bg-red,
 .bg-yellow {
   color: #FFFE;
