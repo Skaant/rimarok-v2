@@ -6,6 +6,7 @@ export default {
   id: 'default',
   title: 'RIMAROK, pour un web responsable',
   lang: langEnum.FR,
+  url: 'rimarok.com',
   provision: provisionUtil,
   mapping: mappingUtil
 }
