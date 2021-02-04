@@ -25,12 +25,12 @@ export default (
     ...data.articles.reduce(
       (acc, article, index) => ({
         ...acc,
-        [index]: websitePageMotif.shape(
+        [index + 1]: websitePageMotif.shape(
           articleTemplate,
           {
             ...data,
             article: {
-              index,
+              index: index + 1,
               ...article
             }
           }
