@@ -9,7 +9,8 @@
     "test": "npm start -- -log test",
     "readme": "npm start -- -k readme -force -log build",
     "website": "npm start -- -k website -force -log build default",
-    "serve": "npm start -- -k website -force -log serve default"
+    "serve": "npm start -- -k website -force -log serve default",
+    "style": "node-sass _websites/_scss/style.scss _websites/default/_assets/style.css"
   },
   "keywords": [
     "romaric",
@@ -24,6 +25,7 @@
   "author": "romaric.ruga@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "express": "^4.17.1",
     "motifs-js": "^0.4.1",
     "showdown": "^1.9.1"

@@ -4,7 +4,7 @@ import mappingUtil from "./_utils/_mapping/mapping.util.js"
 
 export default {
   id: 'default',
-  title: 'RIMAROK, pour un web responsable',
+  title: 'RIMAROK, ingénierie web et éco-conception',
   lang: langEnum.FR,
   url: 'rimarok.com',
   provision: provisionUtil,

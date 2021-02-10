@@ -1,0 +1,62 @@
+extends ../_fragments/layout/layout.frag.pug
+
+block title
+  title= 'Moins = plus' + _title
+
+block content
+  #home.container-fluid.min-vh-100
+    .row.min-vh-100.overflow-hidden.justify-content-center
+      img.min-vh-100(
+        src="/assets/less-equals-more.svg"
+      )
+    .row(
+      style="background-color: #ddb1ff"
+    )
+      .col-12.my-auto.w-100.py-5
+        .text-center
+          p.display-1.text-dark Moins = plus
+    .row.min-vh-100
+      .col-12.my-auto.w-100.py-5.text-center
+        h1.display-1.mb-5 RIMAROK
+        p.display-4 Ingénierie web et éco-conception
+    .row.min-vh-100.bg-success.py-5
+      .col-12.my-auto.w-100
+        .container
+          h2.mb-5 Des solutions créatives, économiques et écologiques pour
+            |  vos sites et applications web.
+          p On peut concilier une attitude responsable sur internet et un design agréable.
+            |  On peut concilier sobriété énergétique et
+          p Conception, design et développement, <b>en équipe ou en autonomie</b> 100% made in France.
+          p Avec un bon travail d'UX, les sites ou applications voient leur
+            |  périmètre restreint <b>au nécessaire</b> : temps de production, coûts de
+            |  maintenance et empreinte environnementale en sont considérablement diminués.
+          p.display-4.mb-5 Rapidement, écologique = économique.
+          a.btn.btn-light.btn-lg(
+            href= "/prestations"
+          ) Mes prestations
+    .row.min-vh-100.py-5
+      .col-12.my-auto
+        .container
+          h2.mb-5 Pourquoi choisir l'éco-conception ?
+          p.display-4.mb-4 Perfomances
+          p Le saviez-vous ? L'amélioration des performances et la mise en place de
+            |  bonnes pratiques d'éco-conception sont absolument contingentes !
+          p Nous identifions ensemble les points de friction et les fonctionnalités obsolètes
+            |  de vos applicatifs pour les rendre <b>plus rapides et pertinents</b> pour vos visiteurs/utilisateurs.
+          p.display-4.mb-4 Économies
+          p En auditant les systèmes de façon holistique, on retrouve souvent des
+            |  compromis fait précédemment pour gagner du temps. Enfin, à court terme seulement.
+          p J'aime autant le refactoring que partir <i>from scratch</i>. Je cherche la solution la plus
+            |  simple et la moins chère, pour vous comme pour moi.
+          p.mb-5 L'histoire de l'éco-conception est aussi celle de la résolution de la dette technique.
+          a.btn.btn-psik-light.btn-lg(
+            href= "/blog"
+          ) En lire d'avantage
+    .row.py-5.bg-psik
+      .col-12
+        .container
+          h2 Mon site créatif
+          p Au passage, vous pourriez aimer faire un tour sur 
+            |  <a href="https://imrok.fr">IMROK</a>, mon site créatif;
+            |  ou sur l'<a href="https://highbs-bok.art">HIGHBS-BOK</a>,
+            |  mon livre de science-fiction permacole et ésotérique.
