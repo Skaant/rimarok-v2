@@ -1,6 +1,5 @@
 import websitePageMotif from 'motifs-js/_motifs/website-page/website-page.motif.js'
 import websiteFolderMotif from 'motifs-js/_motifs/website-folder/website-folder.motif.js'
-import homeTemplate from "../../../_templates/home/home.template.js"
 import legalsTemplate from '../../../_templates/legals/legals.template.js'
 import articlesListTemplate from '../../../_templates/articlesList/articlesList.template.js'
 import articleTemplate from '../../../_templates/article/article.template.js'
@@ -10,14 +9,14 @@ export default (
   options
 ) => ({
   '': websitePageMotif.shape(
-    homeTemplate,
+    '_websites/_templates/home/home.pug',
     data
   ),
-  'mentions-legales': websitePageMotif.shape(
-    legalsTemplate,
+  'prestations': websitePageMotif.shape(
+    '_websites/_templates/prestations/prestations.pug',
     data
   ),
-  'articles': websiteFolderMotif.shape({
+  'blog': websiteFolderMotif.shape({
     '': websitePageMotif.shape(
       articlesListTemplate,
       data
@@ -38,5 +37,13 @@ export default (
       }),
       {}
     )
-  })
+  }),
+  'a-propos': websitePageMotif.shape(
+    '_websites/_templates/prestations/prestations.pug',
+    data
+  ),
+  'mentions-legales': websitePageMotif.shape(
+    legalsTemplate,
+    data
+  ),
 })
