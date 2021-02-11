@@ -61,7 +61,7 @@ html(lang=lang)
           .col-12.col-lg-6
             h3.mb-4 Derniers articles
             ul
-              each article in articles
+              each article in articles.reverse()
                 li
                   a(
                     href= "/blog/" + article.id
