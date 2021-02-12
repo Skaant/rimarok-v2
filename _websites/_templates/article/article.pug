@@ -5,9 +5,7 @@ block title
 
 block content
   -
-    const htmlContent = (new showdown.Converter({
-      simpleLineBreaks: true
-    }))
+    const htmlContent = converter
       .makeHtml(article.content)
 
   .container-fluid
