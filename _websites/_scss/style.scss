@@ -18,16 +18,7 @@
 $body-bg: $gray-800;
 $body-color: $white;
 
-$link-color: $white;
-
-// specific colors
-
-$custom-colors: (
-  "psik": #a735ff,
-  "psik-light": #ddb1ff
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
+$link-color: inherit;
 
 // global styles
 
@@ -39,10 +30,29 @@ p {
   font-size: 1.25rem;
 }
 
+a {
+  text-decoration: underline !important;
+}
+
+.navbar a,
+.button a,
+footer a {
+  text-decoration: none !important;
+}
+
 @media (max-width: map-get($container-max-widths, 'lg')) {
   .display-1 {
     font-size: 4rem !important;
   }
+}
+
+#less-equals-more span {
+  height: 8rem;
+  width: 8rem;
+}
+
+.min-vh-80 {
+  min-height:80vh;
 }
 
 footer {
@@ -58,13 +68,17 @@ footer {
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/badge";
 
 // navbar
 
 $navbar-padding-x: 0;
 $navbar-padding-y: 0;
 
-.navbar { z-index: 10; }
+.navbar {
+  z-index: 10;
+}
 
 a.navbar-brand {
   color: $white;

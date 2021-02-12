@@ -1,6 +1,6 @@
 {
   "name": "rimarok",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My profesionnal website, built on motifs-js.",
   "main": "index.js",
   "type": "module",
