@@ -1,0 +1,9 @@
+li.row
+  .col-12
+    p
+      span.badge.badge-pill.badge-light.mr-2= article.date
+      a(
+        href= '/blog/' + article.id
+      )= article.title
+      each tag in article.tags
+        span.badge.badge-pill.badge-primary.ml-2= tag

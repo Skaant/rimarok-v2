@@ -1,0 +1,24 @@
+extends ../_fragments/layout/layout.fragment.pug
+
+block title
+  title= article.title + ' | Blog | ' + _title
+
+block content
+  -
+    const htmlContent = (new showdown.Converter({
+      simpleLineBreaks: true
+    }))
+      .makeHtml(article.content)
+
+  .container-fluid
+    .row.min-vh-80
+      .col-12.my-auto.w-100.py-5.text-center
+        each tag in article.tags
+          span.badge.badge-pill.badge-primary.mr-2= tag
+        h1.display-4.mb-5= article.title
+        p Publié le
+          span.badge.badge-pill.badge-light.ml-2= article.date
+          
+    .row
+      .col-12.py-5
+        .card.bg-light.text-dark.rounded.shadow.p-5.container !{ htmlContent }

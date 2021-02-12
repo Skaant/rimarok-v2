@@ -1,34 +1,70 @@
-extends ../_fragments/layout/layout.frag.pug
+extends ../_fragments/layout/layout.fragment.pug
 
 block title
   title= 'Développement, audit et formation' + _title
 
 block content
   .container-fluid
-    .row.min-vh-100.bg-psik
-      .col-12.py-5
+    .row.min-vh-80.bg-primary.text-center
+      .col-12.my-auto.w-100
         h1 Développement, audit et formation
-    .row.min-vh-100
-      .col-12.py-5
-        h2 Ingénierie web
-        p Aussi pertinent sur le développement que
-          | la transimission de connaissance (formations).
-        h3 Développement full-stack JavaScript (Node/React)
-        ul
-          li React, Svelte, Angular
-          li Node.js (Express, Nest)
-          li Firebase, Heroku, Vercel (Next.js)
-        h3 DevOps
-        ul
-          li Paramètrage de pipelines CI/CD
-          li GitHub, GitLab
-        h3 Conceptions et audit
-        p Je participe à l'élaboration des applications
-          | et j'analyse les performances de l'existant.
-    .row
-      .col-12
-        h2 Éco-conception
-        p Sensibilisation aux enjeux de la transition énergétique,
-          | implications pour la DSI
-          | et bonnes pratiques de développement web.
-        h3 
+        p.display-4 Mes offres de prestations
+    .row.min-vh-100.py-5
+      .col-12.col-lg-4.px-4.pb-5
+        .card.bg-light.text-dark.shadow.rounded.p-4.container
+          .row
+            .col-12.col-sm-6.col-lg-12
+              h2 À la journée
+              p Développement full-stack JavaScript (Node/React),
+                |  DevOps, éco-conception (sensibilisation et mise
+                |  en place de bonnes pratiques).
+              p
+                span.display-2 420 €
+                span.small TTC
+            .col-12.col-sm-6.col-lg-12
+              .alert.bg-primary.text-light.my-2
+                h3 Réduction 4 jours/semaine
+                p.display-3 -5%
+              .alert.bg-success.text-light.my-2
+                h3 Réduction 3 semaines/mois
+                p.display-3 -12%
+      .col-12.col-md-6.col-lg-4.px-4.pb-5
+        .card.bg-light.shadow.text-dark.rounded.p-4
+          h2 Sites internet
+          p <b>Statiques ou WordPress</b>
+          p Collecte du besoin, design, développement et déploiement.
+          p
+            span.small À partir de
+            br
+            span.display-3 1 000 €
+            span.pl-2 TTC
+          p Pour les projets plus complexes, collaboration possible
+            |  avec la rédactrice, intégratrice et cheffe de projet,
+            |  l'inégalable
+            |  
+            a(
+              href="https://www.malt.fr/profile/lucilejoan?q=lucile+joan"
+            ) Lucile Joan
+            | .
+      .col-12.col-md-6.col-lg-4.px-4
+        .card.bg-light.text-dark.shadow.rounded.p-4
+          h2 Applications web
+          p Bases de données, authentification, API,
+            |  <i>reporting</i>, <i>monitoring</i> ...
+          p
+            span.small À partir de
+            br
+            span.display-3 4000 €
+            span.pl-2 TTC
+          p Pour les projets plus complexes, collaboration possible
+            |  avec mes amis et collègues developpeurs
+            | 
+            a(
+              href="https://www.malt.fr/profile/cedricguerin1"
+            ) Cédric Guérin
+            |  et
+            |  
+            a(
+              href="https://www.malt.fr/profile/gwenaelgirod"
+            ) Gwenaël Girod
+            | .

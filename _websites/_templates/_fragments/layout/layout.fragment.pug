@@ -58,15 +58,16 @@ html(lang=lang)
     )
       .container
         .row.py-5
-          .col-12.col-lg-6
+          .col-12.col-md-6
             h3.mb-4 Derniers articles
-            ul
-              each article in articles
+            ul.list-unstyled
+              each article in articles.slice(articles.length - 5).reverse()
                 li
+                  span.badge.badge-pill.badge-light.mr-2= article.date
                   a(
                     href= "/blog/" + article.id
                   )= article.title
-          .col-12.col-lg-6
+          .col-12.col-md-6
             h3.mb-4 Carte du site
             ul
               li
@@ -89,8 +90,10 @@ html(lang=lang)
                 a(
                   href= "/mentions-legales"
                 ) Mentions légales
-        .row
-          .col-12 Illustrations, design et développement
-            |  par Romaric Ruga (aka Rimarok, Imrok) - 2021
+      .w-100.bg-dark
+        .container
+          .row
+            .col-12.p-2 Illustrations, design et développement :
+              |  Romaric Ruga (aka Rimarok, Imrok) - 2021
 
     script(src="/assets/bootstrap.bundle.min.js")

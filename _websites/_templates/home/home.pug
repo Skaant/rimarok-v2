@@ -1,28 +1,22 @@
-extends ../_fragments/layout/layout.frag.pug
+extends ../_fragments/layout/layout.fragment.pug
 
 block title
   title= 'Moins = plus' + _title
 
 block content
   #home.container-fluid.min-vh-100
-    .row.min-vh-100.overflow-hidden.justify-content-center
-      img.min-vh-100(
-        src="/assets/less-equals-more.svg"
-      )
-    .row(
-      style="background-color: #ddb1ff"
-    )
-      .col-12.my-auto.w-100.py-5
-        .text-center
-          p.display-1.text-dark Moins = plus
     .row.min-vh-100
       .col-12.my-auto.w-100.py-5.text-center
-        h1.display-1.mb-5 RIMAROK
+        p#less-equals-more.display-2.my-5
+          span.badge.badge-pill.badge-light.mx-2 -
+          span.badge.badge-pill.badge-success.mx-2 =
+          span.badge.badge-pill.badge-primary.mx-2 +
+        h1.display-1 RIMAROK
         p.display-4 Ingénierie web et éco-conception
     .row.min-vh-100.bg-success.py-5
       .col-12.my-auto.w-100
         .container
-          h2.mb-5 Des solutions créatives, économiques et écologiques pour
+          h2.my-5 Des solutions créatives, économiques et écologiques pour
             |  vos sites et applications web.
           p On peut concilier une attitude responsable sur internet et un design agréable.
             |  On peut concilier sobriété énergétique et
@@ -30,14 +24,14 @@ block content
           p Avec un bon travail d'UX, les sites ou applications voient leur
             |  périmètre restreint <b>au nécessaire</b> : temps de production, coûts de
             |  maintenance et empreinte environnementale en sont considérablement diminués.
-          p.display-4.mb-5 Rapidement, écologique = économique.
+          p.display-4.mb-5 Rapidement, écologique devient économique.
           a.btn.btn-light.btn-lg(
             href= "/prestations"
           ) Mes prestations
     .row.min-vh-100.py-5
       .col-12.my-auto
         .container
-          h2.mb-5 Pourquoi choisir l'éco-conception ?
+          h2.my-5 Pourquoi choisir l'éco-conception ?
           p.display-4.mb-4 Perfomances
           p Le saviez-vous ? L'amélioration des performances et la mise en place de
             |  bonnes pratiques d'éco-conception sont absolument contingentes !
@@ -48,15 +42,15 @@ block content
             |  compromis fait précédemment pour gagner du temps. Enfin, à court terme seulement.
           p J'aime autant le refactoring que partir <i>from scratch</i>. Je cherche la solution la plus
             |  simple et la moins chère, pour vous comme pour moi.
-          p.mb-5 L'histoire de l'éco-conception est aussi celle de la résolution de la dette technique.
-          a.btn.btn-psik-light.btn-lg(
+          p.mb-5 L'histoire de l'éco-conception est aussi celle de la <b>résolution de la dette technique</b>.
+          a.btn.btn-success.light.btn-lg(
             href= "/blog"
           ) En lire d'avantage
-    .row.py-5.bg-psik
-      .col-12
+    .row.bg-primary
+      .col-12.py-5
         .container
-          h2 Mon site créatif
+          h2.my-5 Mes créations artistiques
           p Au passage, vous pourriez aimer faire un tour sur 
-            |  <a href="https://imrok.fr">IMROK</a>, mon site créatif;
-            |  ou sur l'<a href="https://highbs-bok.art">HIGHBS-BOK</a>,
-            |  mon livre de science-fiction permacole et ésotérique.
+            |  <b><a href="https://imrok.fr">IMROK</a>, mon site créatif</b>.
+          p Ou sur l'<b><a href="https://highbs-bok.art">HIGHBS-BOK</a>,
+            |  mon livre de science-fiction</b> permacole et ésotérique.

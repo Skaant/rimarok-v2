@@ -1,0 +1,17 @@
+extends ../_fragments/layout/layout.fragment.pug
+
+block title
+  title= 'Le blog ' + _title
+
+block content
+  .container-fluid
+    .row.min-vh-80.bg-success
+      .col-12.my-auto.w-100.py-5.text-center
+        h1.my-5 Le blog
+        p.display-4  Web dev,
+          |  éco-conception et philosophie du code</p>
+    .row
+      .col-12.py-5
+        ul.list-unstyled.container
+          each article in articles.slice().reverse()
+            include ../_fragments/articlesListItem/articlesListItem.fragment.pug
