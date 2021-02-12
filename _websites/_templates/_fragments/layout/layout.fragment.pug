@@ -1,0 +1,99 @@
+doctype html
+html(lang=lang)
+  head
+    meta(charset="utf-8")
+    meta(
+      name="description"
+      content=description)
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    - const _title = ' | ' + title
+    block title
+    link(
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/logo.svg")
+    link(
+      rel="image_src"
+      href="/assets/thumbnail.jpg")
+    link(
+      href="/assets/style.css"
+      rel="stylesheet"
+      type="text/css")
+  body
+    nav.navbar.navbar-expand-lg.position-fixed.w-100
+      .container-fluid
+        a.navbar-brand(
+          href="/"
+        ) RIMAROK
+        button.navbar-toggler.mr-2(
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-menu"
+          aria-controls="navbar-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        )
+          span.font-weight-light MENU
+        #navbar-menu.collapse.navbar-collapse.w-100.py-4
+          ul.navbar-nav.me-auto.font-weight-light
+            li.nav-item
+              a.nav-link.text-white(
+                href="/prestations"
+              ) Prestations
+            li.nav-item
+              a.nav-link.text-white(
+                href="/blog"
+              ) Blog
+            li.nav-item
+              a.nav-link.text-white(
+                href="/a-propos"
+              ) À propos
+    
+    block content
+
+    footer(
+      style= "background-color: black"
+    )
+      .container
+        .row.py-5
+          .col-12.col-md-6
+            h3.mb-4 Derniers articles
+            ul.list-unstyled
+              each article in articles.slice(articles.length - 5).reverse()
+                li
+                  span.badge.badge-pill.badge-light.mr-2= article.date
+                  a(
+                    href= "/blog/" + article.id
+                  )= article.title
+          .col-12.col-md-6
+            h3.mb-4 Carte du site
+            ul
+              li
+                a(
+                  href= "/"
+                ) Accueil
+              li
+                a(
+                  href= "/prestations"
+                ) Prestations
+              li
+                a(
+                  href= "/blog"
+                ) Blog
+              li
+                a(
+                  href= "/a-propos"
+                ) À propos
+              li
+                a(
+                  href= "/mentions-legales"
+                ) Mentions légales
+      .w-100.bg-dark
+        .container
+          .row
+            .col-12.p-2 Illustrations, design et développement :
+              |  Romaric Ruga (aka Rimarok, Imrok) - 2021
+
+    script(src="/assets/bootstrap.bundle.min.js")

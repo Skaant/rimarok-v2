@@ -1,0 +1,111 @@
+@use "sass:map";
+
+// font (serif)
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('/assets/PlayfairDisplay-Regular.ttf');
+}
+
+// bootstrap required
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// global variables customization
+
+$body-bg: $gray-800;
+$body-color: $white;
+
+$link-color: inherit;
+
+// global styles
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'PlayfairDisplay', serif;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: underline !important;
+}
+
+.navbar a,
+.button a,
+footer a {
+  text-decoration: none !important;
+}
+
+@media (max-width: map-get($container-max-widths, 'lg')) {
+  .display-1 {
+    font-size: 4rem !important;
+  }
+}
+
+#less-equals-more span {
+  height: 8rem;
+  width: 8rem;
+}
+
+.min-vh-80 {
+  min-height:80vh;
+}
+
+footer {
+  background-color: black;
+}
+
+// bootstrap optionals
+
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/badge";
+
+// navbar
+
+$navbar-padding-x: 0;
+$navbar-padding-y: 0;
+
+.navbar {
+  z-index: 10;
+}
+
+a.navbar-brand {
+  color: $white;
+  font-size: $h2-font-size;
+  padding-left: map-get($spacers, 4);
+  padding-right: map-get($spacers, 4);
+}
+
+button.navbar-toggler {
+  color: $white;
+
+  &:focus { box-shadow: none; }
+}
+
+@media (max-width: map-get($container-max-widths, 'lg')) {
+  
+  #navbar-menu {
+    background-color: $gray-600;
+    box-shadow: $box-shadow;
+    font-size: $h5-font-size;
+  }
+
+  .navbar-nav {
+    padding-left: map-get($spacers, 4) !important;
+    padding-right: map-get($spacers, 4);
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";

@@ -1,6 +1,6 @@
 {
   "name": "rimarok",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My profesionnal website, built on motifs-js.",
   "main": "index.js",
   "type": "module",
@@ -9,7 +9,8 @@
     "test": "npm start -- -log test",
     "readme": "npm start -- -k readme -force -log build",
     "website": "npm start -- -k website -force -log build default",
-    "serve": "npm start -- -k website -force -log serve default"
+    "serve": "npm start -- -k website -force -log serve default",
+    "style": "npx node-sass _websites/_scss/style.scss _websites/default/_assets/style.css"
   },
   "keywords": [
     "romaric",
@@ -24,11 +25,11 @@
   "author": "romaric.ruga@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "express": "^4.17.1",
     "motifs-js": "^0.4.1",
-    "showdown": "^1.9.1"
-  },
-  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "showdown": "^1.9.1",
     "jsontoxml": "^1.0.1",
     "pug": "^3.0.0"
   }
