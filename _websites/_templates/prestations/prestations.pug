@@ -1,21 +1,22 @@
 extends ../_fragments/layout/layout.fragment.pug
 
 block title
-  title= 'Développement, audit et formation' + _title
+  title= 'Développement, audit et formation. Prestations et crew' + _title
 
 block content
   .container-fluid
     .row.min-vh-80.bg-primary.text-center
       .col-12.my-auto.w-100
         h1 Développement, audit et formation
-        p.display-4 Mes offres de prestations
+        p.display-4 Mes offres de prestations, mon crew
     .row.min-vh-100.py-5
       .col-12.col-lg-4.px-4.pb-5
         .card.bg-light.text-dark.shadow.rounded.p-4.container
           .row
             .col-12.col-sm-6.col-lg-12
               h2 À la journée
-              p Développement full-stack JavaScript (Node/React),
+              p <b>Développement et formation :</b>
+                |  full-stack JavaScript (Node/React),
                 |  DevOps, éco-conception (sensibilisation et mise
                 |  en place de bonnes pratiques).
               p
@@ -29,42 +30,93 @@ block content
                 h3 Réduction 3 semaines/mois
                 p.display-3 -12%
       .col-12.col-md-6.col-lg-4.px-4.pb-5
-        .card.bg-light.shadow.text-dark.rounded.p-4
-          h2 Sites internet
-          p <b>Statiques ou WordPress</b>
-          p Collecte du besoin, design, développement et déploiement.
-          p
-            span.small À partir de
-            br
-            span.display-3 1 000 €
-            span.pl-2 TTC
-          p Pour les projets plus complexes, collaboration possible
-            |  avec la rédactrice, intégratrice et cheffe de projet,
-            |  l'inégalable
-            |  
-            a(
-              href="https://www.malt.fr/profile/lucilejoan?q=lucile+joan"
-            ) Lucile Joan
-            | .
+        .card.bg-light.shadow.text-dark.rounded
+          .card-body.pt-4.px-4.pb-2
+            h2 Sites internet
+            p <b>Statiques ou WordPress</b>
+            p Collecte du besoin, design, développement et déploiement.
+            p
+              span.small À partir de
+              br
+              span.display-3 1 000 €
+              span.small TTC
+            p Pour les projets plus complexes, collaboration possible
+              |  avec la rédactrice, intégratrice et cheffe de projet,
+              |  l'inégalable
+              |  
+              a(
+                href="#lucile-joan"
+              ) Lucile Joan
+              | .
+          hr
+          #lucile-joan.card-body.pt-2.px-4.pb-4
+            h3 Travailler avec Lucile Joan
+            p Copywriting, conception et intégration de sites internet, WordPress
+            p.low.text-muted "Ce que je préfère, c'est collaborer avec des gens qui
+              |  croient en leur activité et qui ont envie de la voir grandir.
+              |  Je vous propose toute une palette de services, adaptables et
+              |  modulables en fonction de vos besoins."
+            div
+              a.btn.btn-primary(
+                href='https://www.malt.fr/profile/lucilejoan'
+              ) Malt
+              a.btn.btn-primary.ml-2(
+                href="https://www.linkedin.com/in/lucile-joan/"
+              ) LinkedIn
       .col-12.col-md-6.col-lg-4.px-4
-        .card.bg-light.text-dark.shadow.rounded.p-4
-          h2 Applications web
-          p Bases de données, authentification, API,
-            |  <i>reporting</i>, <i>monitoring</i> ...
-          p
-            span.small À partir de
-            br
-            span.display-3 4000 €
-            span.pl-2 TTC
-          p Pour les projets plus complexes, collaboration possible
-            |  avec mes amis et collègues developpeurs
-            | 
-            a(
+        .card.bg-light.text-dark.shadow.rounded
+          .card-body.pt-4.px-4.pb-2
+            h2 Applications web
+            p Bases de données, authentification, API,
+              |  <i>reporting</i>, <i>monitoring</i> ...
+            p
+              span.small À partir de
+              br
+              span.display-3 4000 €
+              span.small TTC
+            p Pour les projets plus complexes, collaboration possible
+              |  avec mes amis et collègues developpeurs
+              | 
+              a(
+                href="#cedric-guerin"
+              ) Cédric Guérin
+              |  et
+              |  
+              a(
+                href="#gwenael-girod"
+              ) Gwenaël Girod
+              | .
+          hr
+          #cedric-guerin.card-body.pt-2.px-4.pb-2
+            h3 Travailler avec Cédric Guérin
+            p Développement full-stack JavaScript (Node/React)
+            p.low.text-muted "La mission idéale pour moi serait
+              |  la participation à un projet ambitieux from scratch en
+              |  prenant part aux discussions/décision sur le produit."
+            div
+            a.btn.btn-primary(
               href="https://www.malt.fr/profile/cedricguerin1"
-            ) Cédric Guérin
-            |  et
-            |  
-            a(
+            ) Malt
+            a.btn.btn-primary.ml-2(
+              href="https://www.linkedin.com/in/guericed/"
+            ) LinkedIn
+            a.btn.btn-primary.ml-2(
+              href="https://github.com/ElPonito"
+            ) GitHub
+          hr
+          #gwenael-girod.card-body.pt-2.px-4.pb-4
+            h3 Travailler avec Gwenaël Girod
+            p Développement full-stack JavaScript (Node/React)
+            p.low.text-muted "Je m’intéresse aux projets de toute envergure, qu’il
+              |  s’agisse de vitrines marketing avec CMS en Jamstack ou
+              |  d’applications web plus complexes avec API dédiée." 
+            div
+            a.btn.btn-primary(
               href="https://www.malt.fr/profile/gwenaelgirod"
-            ) Gwenaël Girod
-            | .
+            ) Malt
+            a.btn.btn-primary.ml-2(
+              href="https://www.linkedin.com/in/ggirod/"
+            ) LinkedIn
+            a.btn.btn-primary.ml-2(
+              href="https://github.com/Dogson"
+            ) GitHub
