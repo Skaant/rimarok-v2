@@ -43,7 +43,7 @@ Enfin, dans le but d'harmoniser les sites du réseau, un travail sur la converge
 
 ## [`motifs-js`](https://motifs-js-website.vercel.app/)
 
-Un [immense changement apporté récemment au framework est sa publication (voir l'article sur le site)](/articles/1) sur le [registre public npm](https://www.npmjs.com/package/motifs-js).
+Un [immense changement apporté récemment au framework est sa publication (voir l'article sur le site)](/blog/1) sur le [registre public npm](https://www.npmjs.com/package/motifs-js).
 
 Le projet a toujours eu pour vocation a être utilisé entre plusieurs projets, mais sa formalisation en un module Node apporte praticité ainsi qu'une touche de sérieux.
 
