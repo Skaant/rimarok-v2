@@ -30,12 +30,16 @@ p {
   font-size: 1.25rem;
 }
 
+p.low {
+  font-size: 1rem;
+}
+
 a {
   text-decoration: underline !important;
 }
 
 .navbar a,
-.button a,
+a.btn,
 footer a {
   text-decoration: none !important;
 }
@@ -78,6 +82,10 @@ $navbar-padding-y: 0;
 
 .navbar {
   z-index: 10;
+
+  .nav-link {
+    font-size: $h5-font-size;
+  }
 }
 
 a.navbar-brand {
@@ -98,7 +106,6 @@ button.navbar-toggler {
   #navbar-menu {
     background-color: $gray-600;
     box-shadow: $box-shadow;
-    font-size: $h5-font-size;
   }
 
   .navbar-nav {

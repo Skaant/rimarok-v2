@@ -2,12 +2,10 @@ extends ../_fragments/layout/layout.fragment.pug
 
 block title
   title= article.title + ' | Blog | ' + _title
-
+  
 block content
   -
-    const htmlContent = (new showdown.Converter({
-      simpleLineBreaks: true
-    }))
+    const htmlContent = converter
       .makeHtml(article.content)
 
   .container-fluid

@@ -9,11 +9,14 @@ h1, h2, h3, h4, .navbar-brand {
 p {
   font-size: 1.25rem; }
 
+p.low {
+  font-size: 1rem; }
+
 a {
   text-decoration: underline !important; }
 
 .navbar a,
-.button a,
+a.btn,
 footer a {
   text-decoration: none !important; }
 
@@ -4202,6 +4205,8 @@ input[type="button"].btn-block {
 
 .navbar {
   z-index: 10; }
+  .navbar .nav-link {
+    font-size: 1.25rem; }
 
 a.navbar-brand {
   color: #fff;
@@ -4217,8 +4222,7 @@ button.navbar-toggler {
 @media (max-width: 960px) {
   #navbar-menu {
     background-color: #6c757d;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    font-size: 1.25rem; }
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
   .navbar-nav {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem; } }

@@ -1,10 +1,18 @@
 doctype html
 html(lang=lang)
   head
-    meta(charset="utf-8")
+    meta(charset= "utf-8")
+    if description
+      meta(
+        name="description"
+        content= description)
+    if tags
+      meta(
+        name="keywords"
+        content=tags.join(', '))
     meta(
-      name="description"
-      content=description)
+      name="author"
+      content="Romaric Ruga")
     meta(
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no")
@@ -96,4 +104,4 @@ html(lang=lang)
             .col-12.p-2 Illustrations, design et développement :
               |  Romaric Ruga (aka Rimarok, Imrok) - 2021
 
-    script(src="/assets/bootstrap.bundle.min.js")
+    script(src="/assets/bootstrap.min.js")

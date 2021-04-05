@@ -25,6 +25,9 @@ export default (
           '_websites/_templates/article/article.pug',
           {
             ...data,
+            description: article.description
+              || article.content.slice(0, 255),
+            tags: article.tags,
             article: {
               index: index + 1,
               ...article
