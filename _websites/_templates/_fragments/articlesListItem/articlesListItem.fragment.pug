@@ -3,7 +3,7 @@ li.row
     p
       span.badge.badge-pill.badge-light.mr-2= article.date
       a(
-        href= '/blog/' + article.id
+        href= '/blog/' + article.slug
       )= article.title
       each tag in article.tags
         span.badge.badge-pill.badge-primary.ml-2= tag

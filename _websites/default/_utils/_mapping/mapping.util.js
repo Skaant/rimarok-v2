@@ -21,7 +21,7 @@ export default (
     ...data.articles.reduce(
       (acc, article, index) => ({
         ...acc,
-        [index + 1]: websitePageMotif.shape(
+        [article.slug]: websitePageMotif.shape(
           '_websites/_templates/article/article.pug',
           {
             ...data,
